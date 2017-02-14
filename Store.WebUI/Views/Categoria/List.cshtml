@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Store.Dominio.Interface.Categoria>
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+<hr />
+<div>
+    DropDownList - multiple
+    <br />
+    @Html.DropDownList("CategoryId", (SelectList)ViewBag.Categorias)
+    <br />
+    ListBox
+    <br />
+    @Html.ListBox("CategoryId", (SelectList)ViewBag.Categorias, new { size = 4 })
+</div>

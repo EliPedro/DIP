@@ -1,0 +1,25 @@
+﻿@model Store.WebUI.Models.Register
+
+@{
+    ViewBag.Title = "Index";
+
+    List<SelectListItem> list = new List<SelectListItem>();
+
+    SelectListItem one = new SelectListItem() { Text = "Selecione", Value = "" };
+
+    list.Add(one);
+
+    for (int i = 1; i < 50; ++i)
+    {
+        one = new SelectListItem() { Text = i.ToString(), Value = i.ToString() };
+
+        list.Add(one);
+    }
+
+}
+
+<hr />
+
+<div class="form-group">
+    @Html.DropDownListFor(c => c.Age, list, new { @class = "control-label col-md-2" })
+</div>
